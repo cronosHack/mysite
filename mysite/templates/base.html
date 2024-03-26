@@ -1,0 +1,813 @@
+{% load static %}
+
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Survey on Student Support Services {% block title %}
+    
+    {% endblock title %} </title>
+    
+
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"  crossorigin="anonymous">
+<link href="{% static 'css/main.css' %}" rel="stylesheet"  crossorigin="anonymous">
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/checkout.css' %}" rel="stylesheet">
+  </head>
+  <body class="bg-body-tertiary">
+
+    
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+        <h2>Survey form</h2>
+        <p class="lead">This survey is crucial for ensuring that the challenges sprouted from the current state of student support services are addressed according to the specific needs of students, firstly and then academic instructors, administrative staff and stakeholders in institutions of higher learning.</p>
+        </div>
+
+        
+        <div class="col-md-7 col-lg-8">
+
+            <h4 class="mb-3">General Information</h4>
+            <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="firstName" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                        Valid first name is required.
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="lastName" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                        Valid last name is required.
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="role" class="form-label">Role</label>
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input id="studentRole" name="studentRole" type="radio" class="form-check-input" checked required>
+                                <label class="form-check-label" for="studentRole">Student</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input id="lecturerRole" name="lecturerRole" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="lecturerRole">Lecturer</label>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input id="adminRole" name="adminRole" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="adminRole">Admin Staff</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input id="stakesRole" name="stakesRole" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="stakesRole">Stakeholder</label>
+                            </div>
+
+                        </div>
+
+                        <div class="invalid-feedback">
+                            Your role is required.
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for follow up.
+                    </div>
+
+                </div>
+
+                <div class="col-12">
+                    <label for="department" class="form-label">Department</label>
+                    <input type="text" class="form-control" id="department" placeholder="Department" required>
+
+                    <div class="invalid-feedback">
+                        Please specify your department.
+                    </div>
+
+                </div>
+
+                <div class="col-12">
+                    <label for="faculty" class="form-label">Faculty</label>
+                    <input type="text" class="form-control" id="faculty" placeholder="Faculty">
+                </div>
+
+                <div class="col-md-5">
+                    <label for="expTime" class="form-label">Years of Experience/Study</label>
+                    <input type="integer" class="form-control" id="expTime" placeholder="" required>
+
+                    <div class="invalid-feedback">
+                        Field required.
+                    </div>
+
+                </div>
+
+
+                <hr class="my-4">
+
+            
+            <h4 class="mb-3">Technology Usage and Access</h4>
+
+                <div class="row g-3">
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Frequency of Technology Use In Your Daily Role:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="two-option-first" placeholder="" value="" checked required>
+                                <label for="two-option-first" class="form-check-label">rarely</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="two-option-second" placeholder="" value="" checked required>
+                                <label for="two-option-second" class="form-check-label">ocassionally</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="two-option-third" placeholder="" value="" checked required>
+                                <label for="two-option-third" class="form-check-label">frequently</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="two-option-fourth" placeholder="" value="" checked required>
+                                <label for="two-option-fourth" class="form-check-label">always</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">  
+                        <h5 class="mb-3">Types of Devices Regularly Used:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="two-option-fifth" placeholder="" value="" checked required>
+                                <label for="two-option-fifth" class="form-check-label">smartphone</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="two-option-sixth" placeholder="" value="" checked required>
+                                <label for="two-option-sixth" class="form-check-label">tablet</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="two-option-seventh" placeholder="" value="" checked required>
+                                <label for="two-option-seventh" class="form-check-label">laptop</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="two-option-eighth" placeholder="" value="" checked required>
+                                <label for="two-option-eighth" class="form-check-label">desktop</label>
+                            </div>
+
+                            <div class="input-group has-validation">
+                                <label for="two-option-nineth" class="form-label">Other</label>
+                                <input type="text" class="form-control" id="two-option-nineth" placeholder="" value=""  required> 
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Access to A Reliable Internet Connection:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="two-option-tenth" placeholder="" value="" checked required>
+                                <label for="two-option-tenth" class="form-check-label">yes</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="two-option-eleventh" placeholder="" value="" checked required>
+                                <label for="two-option-eleventh" class="form-check-label">sometimes</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="two-option-twelveth" placeholder="" value="" checked required>
+                                <label for="two-option-twelveth" class="form-check-label">no</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                    
+
+                <hr class="my-4">
+
+            <h4 class="mb-3">Awareness and Utilization of Support Services</h4>
+
+                <div class="row g-3">
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Awareness of Existing Student Support Services:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-first" placeholder="" value="" checked required>
+                                <label for="three-option-first" class="form-check-label">fully aware</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-second" placeholder="" value="" checked required>
+                                <label for="three-option-second" class="form-check-label">somewhat aware </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-third" placeholder="" value="" checked required>
+                                <label for="three-option-third" class="form-check-label">unaware</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-fourth" placeholder="" value="" checked required>
+                                <label for="three-option-fourth" class="form-check-label">not applicable</label>
+                            </div>
+
+                            <hr class="my-4">   
+                                Shipping address is the same as my billing address
+                                Save this information for next time
+                            <hr class="my-4">
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Frequency of Using Student Support Services:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-fifth" placeholder="" value="" checked required>
+                                <label for="three-option-fifth" class="form-check-label">regularly</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-sixth" placeholder="" value="" checked required>
+                                <label for="three-option-sixth" class="form-check-label">ocassionally</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-seventh" placeholder="" value="" checked required>
+                                <label for="three-option-seventh" class="form-check-label">never</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-eighth" placeholder="" value="" checked required>
+                                <label for="three-option-eighth" class="form-check-label">not applicable</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Challenges in Accessing or Using Student Support Services:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-nineth" placeholder="" value="" checked required>
+                                <label for="three-option-nineth" class="form-check-label">lack of information</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-tenth" placeholder="" value="" checked required>
+                                <label for="three-option-tenth" class="form-check-label">complex processes</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-eleventh" placeholder="" value="" checked required>
+                                <label for="three-option-eleventh" class="form-check-label">inadequate resources</label>
+                            </div>
+
+                            <div class="input-group has-validation">
+                                <label for="three-option-twelveth" class="form-label">Other</label>
+                                <input type="text" class="form-control" id="three-option-twelveth" placeholder="" value=""  required> 
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Extent to Which These Challenges Have Negatively Impacted Your Academic Learning Experience:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-thirteenth" placeholder="" value="" checked required>
+                                <label for="three-option-thirteenth" class="form-check-label">very much</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-fourteenth" placeholder="" value="" checked required>
+                                <label for="three-option-fourteenth" class="form-check-label">considerably</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-fifteenth" placeholder="" value="" checked required>
+                                <label for="three-option-fifteenth" class="form-check-label">moderately</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="three-option-sixteenth" placeholder="" value="" checked required>
+                                <label for="three-option-sixteenth" class="form-check-label">a little</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">
+                    
+                        <h5 class="mb-3">Elaborate on the Negative Impact You Have Experienced as A Result</h5>
+                        
+                        <div class="input-group has-validation">
+
+                            <input type="text" class="form-control" id="three-option-seventeenth" placeholder="" value="" required>
+
+                            <div class="invalid-feedback">
+                                Deepen my understanding to better address these issues in the design of the new system.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <hr class="my-4">
+
+            <h4 class="mb-3">Current Systems Evaluation</h4>
+                <div class="row g-3">
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Challenges With The Current Management Systems:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="four-option-first" placeholder="" value="" checked required>
+                                <label for="four-option-first" class="form-check-label">registration difficulties</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="four-option-second" placeholder="" value="" checked required>
+                                <label for="four-option-second" class="form-check-label">delayed access to study material</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="four-option-third" placeholder="" value="" checked required>
+                                <label for="four-option-third" class="form-check-label">assignment submission and feedback</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="four-option-fourth" placeholder="" value="" checked required>
+                                <label for="four-option-fourth" class="form-check-label">financial services</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="four-option-fifth" placeholder="" value="" checked required>
+                                <label for="four-option-fifth" class="form-check-label">communication with administration</label>
+                            </div>
+
+                            <div class="input-group has-validation">
+                                <label for="four-option-sixth" class="form-label">Other</label>
+                                <input type="text" class="form-control" id="four-option-sixth" placeholder="" value=""  required> 
+                            </div>
+
+                            <hr class="my-4">   
+                                Shipping address is the same as my billing address
+                                Save this information for next time
+                            <hr class="my-4">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <hr class="my-4">
+
+            <h4 class="mb-3">Data Management and Collection</h4>
+
+                <div class="row g-3">
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Satisfaction With Current Data Management for Student Support Services:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="five-option-first" placeholder="" value="" checked required>
+                                <label for="five-option-first" class="form-check-label">very dissatisfied</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="five-option-second" placeholder="" value="" checked required>
+                                <label for="five-option-second" class="form-check-label">dissatisfied</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="five-option-third" placeholder="" value="" checked required>
+                                <label for="five-option-third" class="form-check-label">neutral</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="five-option-fourth" placeholder="" value="" checked required>
+                                <label for="five-option-fourth" class="form-check-label">satisfied</label>
+                            </div>
+
+                            <hr class="my-4">  
+                                Shipping address is the same as my billing address
+                                Save this information for next time
+                            <hr class="my-4">
+
+                        </div>
+
+                    </div>
+
+                
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Problems Encountered During Data Management and Capture:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="five-option-fifth" placeholder="" value="" checked required>
+                                <label for="five-option-fifth" class="form-check-label">data inaccuracy</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="five-option-sixth" placeholder="" value="" checked required>
+                                <label for="five-option-sixth" class="form-check-label">data insecurity</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="five-option-seventh" placeholder="" value="" checked required>
+                                <label for="five-option-seventh" class="form-check-label">delayed data processing</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="five-option-eighth" placeholder="" value="" checked required>
+                                <label for="five-option-eighth" class="form-check-label">delayed data access and collection</label>
+                            </div>
+
+                            <div class="input-group has-validation">
+                                <label for="five-option-nineth" class="form-label">Other</label>
+                                <input type="text" class="form-control" id="five-option-nineth" placeholder="" value=""  required> 
+                            </div>
+
+                            <hr class="my-4">   
+                                Shipping address is the same as my billing address
+                                Save this information for next time
+                            <hr class="my-4">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <hr class="my-4">
+
+            <h4 class="mb-3">Desired Features and Functionality</h4>
+
+                <div class="row g-3">
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Important Features for the New System:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-first" placeholder="" value="" checked required>
+                                <label for="six-option-first" class="form-check-label">user-friendly interface</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-second" placeholder="" value="" checked required>
+                                <label for="six-option-second" class="form-check-label">real-time notifications</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-third" placeholder="" value="" checked required>
+                                <label for="six-option-third" class="form-check-label">mobile access</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-fourth" placeholder="" value="" checked required>
+                                <label for="six-option-fourth" class="form-check-label">automated processes</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="rarely" placeholder="" value="" checked required>
+                                <label for="rarely" class="form-check-label">data security</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-fifth" placeholder="" value="" checked required>
+                                <label for="six-option-fifth" class="form-check-label">real-time data access</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-sixth" placeholder="" value="" checked required>
+                                <label for="six-option-sixth" class="form-check-label">transparent data handling</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-seventh" placeholder="" value="" checked required>
+                                <label for="six-option-seventh" class="form-check-label">customizable reports</label>
+                            </div>
+
+                            <div class="input-group has-validation">
+                                <label for="six-option-eighth" class="form-label">Other</label>
+                                <input type="text" class="form-control" id="six-option-eighth" placeholder="" value=""  required> 
+                            </div> 
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Preferred Methods for Sytem Interaction:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-nineth" placeholder="" value="" checked required>
+                                <label for="six-option-nineth" class="form-check-label">web portal</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-tenth" placeholder="" value="" checked required>
+                                <label for="six-option-tenth" class="form-check-label">mobile app</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-eleventh" placeholder="" value="" checked required>
+                                <label for="six-option-eleventh" class="form-check-label">email notifications</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-twelveth" placeholder="" value="" checked required>
+                                <label for="six-option-twelveth" class="form-check-label">SMS alerts</label>
+                            </div>
+
+                            <div class="input-group has-validation">
+                                <label for="six-option-thirteenth" class="form-label">Other</label>
+                                <input type="text" class="form-control" id="six-option-thirteenth" placeholder="" value=""  required> 
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Intergration With Existing Systems:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-fourteenth" placeholder="" value="" checked required>
+                                <label for="six-option-fourteenth" class="form-check-label">irrelevant</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-fifteenth" placeholder="" value="" checked required>
+                                <label for="six-option-fifteenth" class="form-check-label">considerable</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-sixteenth" placeholder="" value="" checked required>
+                                <label for="six-option-sixteenth" class="form-check-label">important</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="six-option-seventeenth" placeholder="" value="" checked required>
+                                <label for="six-option-seventeenth" class="form-check-label">critical</label>
+                            </div>
+
+                            <hr class="my-4"> 
+                                Shipping address is the same as my billing address
+                                Save this information for next time
+                            <hr class="my-4">
+
+                        </div>
+
+                    </div>
+
+                <hr class="my-4">
+
+            <h4 class="mb-3">Specific Needs and Expectations</h4>
+
+                <div class="row g-3">
+
+                    <div class="col-sm-6">
+
+                        <label for="seven-option-first" class="form-label">Key Improvements You Would Like To See In Student Support Services</label>
+                        
+                        <div class="input-group has-validation"> 
+                            <input type="text" class="form-control" id="seven-option-first" placeholder="" value="" required>
+
+                            <div class="invalid-feedback">
+                            Field is required.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <label for="seven-option-second" class="form-label">Additional Services or Support Needed From The System</label>
+
+                        <div class="input-group has-validation"> 
+
+                            <input type="text" class="form-control" id="seven-option-second" placeholder="" value="" required>
+
+                            <div class="invalid-feedback">
+                                Field is required.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <hr class="my-4">
+
+            <h4 class="mb-3">Stakeholder-specific Needs</h4>
+
+                <div class="row g-3">
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Key Data Access Needs for Decision Making:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="eight-option-first" placeholder="" value="" checked required>
+                                <label for="eight-option-first" class="form-check-label">real-time data</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="eight-option-second" placeholder="" value="" checked required>
+                                <label for="eight-option-second" class="form-check-label">historical data analysis</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="eight-option-third" placeholder="" value="" checked required>
+                                <label for="eight-option-third" class="form-check-label">data export capabilities</label>
+                            </div>
+
+                            <div class="input-group has-validation">
+                                <label for="eight-option-fourth" class="form-label">Other</label>
+                                <input type="text" class="form-control" id="eight-option-fourth" placeholder="" value=""  required> 
+                            </div>
+
+                            <hr class="my-4">  
+                                Shipping address is the same as my billing address
+                                Save this information for next time
+                            <hr class="my-4">
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <h5 class="mb-3">Expectations for Transparency and Policy Enforcement:</h5>
+
+                        <div class="input-group has-validation">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="eight-option-fifth" placeholder="" value="" checked required>
+                                <label for="eight-option-fifth" class="form-check-label" style=";">clear data governance policies</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="eight-option-sixth" placeholder="" value="" checked required>
+                                <label for="eight-option-sixth" class="form-check-label" style=";">regular system audits</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="eight-option-seventh" placeholder="" value="" checked required>
+                                <label for="eight-option-seventh" class="form-check-label" style=";">stakeholder involvement in policy creation</label>
+                            </div>
+
+                            <div class="input-group has-validation">
+                                <label for="eight-option-eighth" class="form-label" style="">Other</label>
+                                <input type="text" class="form-control" id="eight-option-eighth" placeholder="" value=""  required> 
+                            </div>
+
+                        </div>
+                    </div>
+
+                
+                <hr class="my-4">
+
+            <h4 class="mb-3">Additional Feedback</h4>
+
+                <div class="row g-3">
+                
+                    <div class="col-sm-6">
+
+                        <label for="nine-option-first" class="form-label">Comments or Suggestions About Improving Student Support Services</label>
+
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="nine-option-first" placeholder="" value="" required>
+
+                            <div class="invalid-feedback">
+                            Field is required.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <label for="nine-option-second" class="form-label">Additional Comments or Suggestions about the system functionality</label>
+
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="nine-option-second" placeholder="" value="" required>
+
+                            <div class="invalid-feedback">
+                            Field is required.
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <hr class="my-4">
+        
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="same-address">
+                    <label class="form-check-label" for="same-address">Implementing a management system that offers real-time data access, processing, storage and transmission, robust data analytic tools for evaluating and monitoring performance of students and services offered in support of their learning experience, would solve the issues posed.</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="save-info">
+                    <label class="form-check-label" for="save-info">The proposed system in addition to its real-time qualities, it offers ealry detection of inefficiencies and the opportunity for timely intervention, improving the productivity of the institutions, this having monetary rewards as well as fulfilling the objective of higher learning institutions.</label>
+                </div>
+
+                <hr class="my-4">
+
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Submit</button>
+            </form>
+        </div>      
+    </main>
+
+    <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+        <p class="mb-1">&copy; 2020–2024 Busitema University <strong>MUDUULI CHRISTIAN JAMES YEAR IV BACHELORS DEGREE IN COMPUTER ENGINEERING</strong> FINAL YEAR PROJECT SURVEY FORM. SUPERVISED BY <strong>DR OCEN GILBERT</strong></p>
+    </footer>
+</div>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <script src="{% static 'js/checkout.js' %}"></script></body>
+</html>
